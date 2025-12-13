@@ -1,0 +1,407 @@
+/* --- GENEL AYARLAR --- */
+body {
+    font-family: 'Ubuntu', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #333333; 
+    color: #aea79f; 
+    line-height: 1.6;
+}
+
+/* Link Ayarları */
+a {
+    text-decoration: none;
+    color: #E95420;
+    font-weight: 500;
+    transition: color 0.2s; 
+}
+ 
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- NAVİGASYON --- */
+nav {
+    background-color: #1d1d1d;
+    padding: 0;
+    border-bottom: 1px solid #111;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: #fdfdfd; /* Panel yazıları */
+    font-weight: 400;
+    font-size: 0.95em;
+    border-top: 3px solid transparent; /* Üst çizgi */
+}
+
+/* Üzerine gelince */
+nav ul li a:hover {
+    background-color: #2c2c2c;
+    color: #E95420;
+    border-top: 3px solid #E95420; /* Aktif sekme çizgisi */
+    text-decoration: none;
+}
+
+/* --- KAPSAYICILAR --- */
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Başlıklar */
+h1, h2, h3 {
+    color: #ffffff;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+/* --- ANA SAYFA HEADER --- */
+.main-header {
+    text-align: center;
+    background: linear-gradient(135deg, #772953 0%, #E95420 100%);
+    padding: 60px 20px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.main-header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-header p {
+    color: #fdfdfd;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Butonlar */
+.cta-button {
+    display: inline-block;
+    background-color: #fdfdfd;
+    color: #E95420 !important;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.2s;
+    text-decoration: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #E95420;
+    color: white !important;
+}
+
+/* --- PROFİL FOTOĞRAFI --- */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 4px solid #E95420;
+    background-color: #333;
+    padding: 3px;
+}
+
+/* --- HAKKIMDA & KARTLAR --- */
+.about-me-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color: #3e3e3e;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #484848;
+}
+
+/* --- PROJELER LİSTESİ --- */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #3e3e3e;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #484848;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Kartın üzerine gelince */
+.project-item:hover {
+    transform: translateY(-3px);
+    border-color: #E95420; 
+}
+
+.project-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+}
+
+.project-item p {
+    color: #aea79f;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #2c2c2c;
+    padding: 6px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.project-item a:hover {
+    background-color: #E95420;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- İLETİŞİM FORMU --- */
+#contactForm {
+    background-color: #3e3e3e;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #484848;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fdfdfd;
+    font-weight: 500;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Focus olunca çerçeve ayarları*/
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #E95420;
+    box-shadow: 0 0 0 2px rgba(233, 84, 32, 0.2);
+}
+
+#contactForm button {
+    background-color: #0E8420;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#contactForm button:hover {
+    background-color: #129d27;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .about-me-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li a {
+        border-top: none;
+        border-left: 3px solid transparent;
+    }
+    nav ul li a:hover {
+        border-top: none;
+        border-left: 3px solid #E95420;
+    }
+    
+}
+/* --- DİNAMİK PROJE AÇIKLAMALARI --- */
+
+.project-item {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Başlık */
+.project-item h3 {
+    margin-bottom: 5px;
+    transition: margin 0.4s ease;
+}
+
+/* Açıklama metni (Başlangıçta gizli) */
+.project-item p {
+    opacity: 0;                
+    max-height: 0;             
+    overflow: hidden;          
+    margin: 0;                 
+    transform: translateY(20px); 
+    transition: all 0.4s ease; 
+}
+
+/* Link/Buton (Başlangıçta gizli) */
+.project-item a {
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s; 
+}
+
+/* --- MOUSE ÜSTÜNE GELİNCE (HOVER) --- */
+
+/* Açıklamayı göster */
+.project-item:hover p {
+    opacity: 1;                
+    max-height: 200px;         
+    margin-top: 15px;          
+    transform: translateY(0);  
+}
+
+/* Butonu göster */
+.project-item:hover a {
+    opacity: 1;
+}
+
+/* Kartı yukarı kaldır */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4); 
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* İkonlar arası boşluk */
+    margin-top: 30px;
+}
+
+.social-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333; /* Koyu Gri Arka Plan */
+    border-radius: 12px; /* Ubuntu tarzı hafif yuvarlak köşe */
+    border: 1px solid #484848;
+    color: #aea79f; /* İkon rengi (Pasif) */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yaylanma efekti */
+    position: relative;
+    overflow: hidden;
+}
+
+.social-box svg {
+    width: 24px;
+    height: 24px;
+    z-index: 2; /* İkon her zaman üstte */
+    transition: color 0.3s;
+}
+
+/* --- HOVER EFEKTLERİ --- */
+
+.social-box:hover {
+    transform: translateY(-8px) scale(1.1); /* Yukarı fırlama ve büyüme */
+    border-color: #E95420; /* Çerçeve Turuncu olur */
+    box-shadow: 0 10px 20px rgba(233, 84, 32, 0.3); /* Turuncu parlama */
+}
+
+.social-box:hover svg {
+    color: #ffffff; /* İkon beyaza döner */
+}
+
+/* Arka planda dolan renk efekti */
+.social-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #772953, #E95420);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.social-box:hover::before {
+    opacity: 1; /* Hover olunca arka plan renklenir */
+}
+
+/* GitHub'a özel renk  */
+/* .social-box.github:hover { border-color: #fff; } */
+
+/* LinkedIn'e özel renk */
+/* .social-box.linkedin:hover { border-color: #0077b5; } */
+
+/* --- PROJE MEDYA STİLLERİ (Ubuntu Style) --- */
+
+.media-container {
+    margin: 40px 0;
+    text-align: center; /* Ortalar */
+}
+
+/* Resim ve Videoların Genel Stili */
+.project-media {
+    width: 100%; 
+    max-width: 800px;
+    height: auto; 
+    border-radius: 8px;
+    border: 1px solid #484848;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+
+.project-media:hover {
+    transform: scale(1.02);
+    border-color: #E95420;
+}
+
+/* Resim altı yazısı */
+.media-caption {
+    font-size: 0.9em;
+    color: #aea79f;
+    font-style: italic;
+    margin-top: 5px;
+}
