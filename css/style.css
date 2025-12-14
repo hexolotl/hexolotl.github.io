@@ -321,11 +321,11 @@ h1, h2, h3 {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #333; /* Koyu Gri Arka Plan */
-    border-radius: 12px; /* Ubuntu tarzı hafif yuvarlak köşe */
+    background-color: #333; 
+    border-radius: 12px; 
     border: 1px solid #484848;
-    color: #aea79f; /* İkon rengi (Pasif) */
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yaylanma efekti */
+    color: #aea79f; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     position: relative;
     overflow: hidden;
 }
@@ -333,20 +333,19 @@ h1, h2, h3 {
 .social-box svg {
     width: 24px;
     height: 24px;
-    z-index: 2; /* İkon her zaman üstte */
+    z-index: 2;
     transition: color 0.3s;
 }
 
 /* --- HOVER EFEKTLERİ --- */
 
 .social-box:hover {
-    transform: translateY(-8px) scale(1.1); /* Yukarı fırlama ve büyüme */
-    border-color: #E95420; /* Çerçeve Turuncu olur */
-    box-shadow: 0 10px 20px rgba(233, 84, 32, 0.3); /* Turuncu parlama */
+    transform: translateY(-8px) scale(1.1); 
+    border-color: #E95420; -shadow: 0 10px 20px rgba(233, 84, 32, 0.3); 
 }
 
 .social-box:hover svg {
-    color: #ffffff; /* İkon beyaza döner */
+    color: #ffffff; 
 }
 
 /* Arka planda dolan renk efekti */
@@ -373,7 +372,6 @@ h1, h2, h3 {
 /* LinkedIn'e özel renk */
 /* .social-box.linkedin:hover { border-color: #0077b5; } */
 
-/* --- PROJE MEDYA STİLLERİ (Ubuntu Style) --- */
 
 .media-container {
     margin: 40px 0;
@@ -404,4 +402,41 @@ h1, h2, h3 {
     color: #aea79f;
     font-style: italic;
     margin-top: 5px;
+}
+
+/* --- MOBİL CİHAZ DÜZELTMESİ --- */
+/* Ekran genişliği 768px ve altındaysa (Tablet ve Telefonlar) */
+@media (max-width: 768px) {
+    
+    .project-item p {
+        opacity: 1 !important;        
+        max-height: none !important;  
+        margin-top: 15px !important;  
+        transform: translateY(0) !important; 
+    }
+
+    /* 2. Link/Butonları her zaman göster */
+    .project-item a {
+        opacity: 1 !important;        
+        transition: none !important;  
+        display: inline-block !important; 
+    }
+
+    
+    .project-item {
+        transform: none !important;   
+        box-shadow: none !important;  
+        border-color: #484848;       
+        padding-bottom: 25px;        
+    }
+    
+    /* 4. Butonların mobilde daha kolay tıklanması için ayar */
+    .project-item a.cta-button, 
+    .project-item a {
+        padding: 12px 20px; 
+        margin-top: 15px;
+        background-color: #333; /* Arka planı belirginleştir */
+        color: #E95420; /* Turuncu yazı */
+        border: 1px solid #E95420;
+    }
 }
