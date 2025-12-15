@@ -440,3 +440,98 @@ h1, h2, h3 {
         border: 1px solid #E95420;
     }
 }
+
+/* --- HOBİLER BÖLÜMÜ --- */
+
+.hobbies-grid {
+    display: grid;
+    /* Ekran genişliğine göre otomatik sığdırır (Responsive) */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.hobby-card {
+    background-color: #3e3e3e; /* Kart rengi */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #484848;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* İkon Ayarları */
+.hobby-card svg {
+    width: 40px;
+    height: 40px;
+    color: #aea79f; /* gri renk */
+    margin-bottom: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.hobby-card h4 {
+    margin: 0 0 10px 0;
+    color: #fdfdfd;
+    font-size: 1.1em;
+}
+
+.hobby-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #aea79f;
+}
+
+/* --- HOVER EFEKTLERİ (Mouse Üstüne Gelince) --- */
+.hobby-card:hover {
+    transform: translateY(-5px); 
+    border-color: #E95420; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hobby-card:hover svg {
+    color: #E95420; 
+    transform: scale(1.1); 
+}
+
+.hobby-card:hover h4 {
+    color: #E95420; 
+}
+
+/* --- HOBİLER İÇİN ANİMASYON AYARLARI --- */
+
+/* 1. Başlangıç Durumu (Gizli) */
+.hobby-card p {
+    opacity: 0;                /* Görünmez */
+    max-height: 0;             /* Yer kaplamaz */
+    overflow: hidden;          /* Taşan yazıyı gizle */
+    margin-top: 0;             /* Boşluğu sıfırla */
+    transform: translateY(10px); /* Hafif aşağıda beklesin */
+    transition: all 0.3s ease; /* Yumuşak geçiş süresi */
+}
+
+.hobby-card:hover p {
+    opacity: 1;                
+    max-height: 100px;         
+    margin-top: 10px;          
+    transform: translateY(0);  
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+/* --- MOBİL CİHAZ DÜZELTMESİ (hobi) --- */
+@media (max-width: 768px) {
+    .hobby-card p {
+        opacity: 1 !important;        
+        max-height: none !important;  
+        margin-top: 10px !important;  
+        transform: none !important;   
+    }
+    
+    .hobby-card {
+        transform: none !important;   
+    }
+}
